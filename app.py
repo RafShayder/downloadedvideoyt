@@ -1,11 +1,12 @@
 from flask import Flask, request, render_template, send_file
+from flask_frozen import Freezer
 import os
 from pytube import YouTube
 from moviepy.editor import *
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
-
+freezer = Freezer(app)
 # Crear la carpeta de subidas si no existe
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])

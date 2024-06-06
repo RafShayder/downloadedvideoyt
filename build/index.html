@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Descargar Video o Audio de YouTube</title>
+</head>
+<body class="bg-gray-100 text-gray-900 flex items-center justify-center h-screen">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg shadow">
+        <h1 class="text-2xl font-bold mb-4">Descargar Video o Audio de YouTube</h1>
+        <form action="/" method="post">
+            <div class="mb-4">
+                <label for="url" class="block text-sm font-medium text-gray-700">URL de YouTube</label>
+                <input type="text" name="url" id="url" class="block w-full p-2 border border-gray-300 rounded-lg mt-1" placeholder="Ingrese la URL del video">
+            </div>
+            <div class="mb-4">
+                <label for="download_type" class="block text-sm font-medium text-gray-700">Tipo de Descarga</label>
+                <select name="download_type" id="download_type" class="block w-full p-2 border border-gray-300 rounded-lg mt-1">
+                    <option value="video-aduio">Video con Audio</option>
+                    <option value="video">Solo Video</option>
+                    <option value="audio">Solo Audio</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg">Descargar</button>
+        </form>
+    </div>
+</body>
+</html>
